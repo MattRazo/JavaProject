@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>VehicleServlet</servlet-name>
+        <!--java class-->
+        <servlet-class>vehicleForm.VehicleServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SortingServlet</servlet-name>
+        <servlet-class>vehicleForm.SortingServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SortingPrice</servlet-name>
+        <servlet-class>vehicleForm.SortingPrice</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>VehicleServlet</servlet-name>
+        <!--Form submission-->
+        <url-pattern>/vehicleTime</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SortingServlet</servlet-name>
+        <url-pattern>/SortingTime</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SortingPrice</servlet-name>
+        <url-pattern>/SortingPriceTime</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
